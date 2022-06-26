@@ -5,6 +5,7 @@ import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import Prodcuts from "./components/Prodcuts";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   const [isMenuShown, setIsMenuShown] = useState(false);
@@ -17,6 +18,7 @@ function App() {
       <DevApi />
       <Customers />
       <Contact />
+      <Footer />
     </div>
   );
 }

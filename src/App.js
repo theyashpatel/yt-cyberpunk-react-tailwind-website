@@ -1,7 +1,14 @@
+import { useState } from "react";
+import HeroSection from "./components/HeroSection";
+import Navbar from "./components/Navbar";
+
 function App() {
+  const [isMenuShown, setIsMenuShown] = useState(false);
+
   return (
     <div>
-      <h1 className="text-4xl text-thBlue">Hello</h1>
+      <Navbar isMenuShown={isMenuShown} setIsMenuShown={setIsMenuShown} />
+      <HeroSection />
     </div>
   );
 }

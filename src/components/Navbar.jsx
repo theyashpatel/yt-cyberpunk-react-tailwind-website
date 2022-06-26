@@ -2,6 +2,7 @@ import React from "react";
 import GradientBtn from "./GradientBtn";
 
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const Navbar = ({ isMenuShown, setIsMenuShown }) => {
   const links = [
@@ -42,7 +43,9 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
                   key={id}
                   className="p-4 uppercase duration-200 hover:text-thBlue cursor-pointer"
                 >
-                  {link}
+                  <Link to={link} smooth duration={500}>
+                    {link}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -66,7 +69,14 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
         <ul>
           {links.map(({ id, link }) => (
             <li key={id} className="p-4 uppercase cursor-pointer">
-              {link}
+              <Link
+                onClick={() => setIsMenuShown(false)}
+                to={link}
+                smooth
+                duration={500}
+              >
+                {link}
+              </Link>
             </li>
           ))}
           <GradientBtn className="mt-10 capitalize" title="get anton" />

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
+import Prodcuts from "./components/Prodcuts";
 
 function App() {
   const [isMenuShown, setIsMenuShown] = useState(false);
@@ -8,7 +9,8 @@ function App() {
   return (
     <div>
       <Navbar isMenuShown={isMenuShown} setIsMenuShown={setIsMenuShown} />
-      <HeroSection />
+      <HeroSection isMenuShown={isMenuShown} />
+      <Prodcuts />
     </div>
   );
 }
